@@ -1,0 +1,12 @@
+.navs {
+    background-color: white;
+    color: rgb(2, 2, 99);
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px 5px 4px rgba(0, 0, 0, 0.2); /* Added shadow */
+    text-decoration: none;
+    margin: 5px;
+    &:hover{
+        box-shadow: 0 4px 10px 6px rgba(0, 0, 0, 0.3); /* Elevated on hover */
+    }
+}
