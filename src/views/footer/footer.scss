@@ -1,0 +1,10 @@
+.footer{
+    background-color: azure;
+    color: grey;
+    padding: 20px; /* Added padding */;
+    box-shadow: 0 -4px 8px 5px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    grid-area: footer;
+    a{
+        text-decoration: underline;
+    }
+}

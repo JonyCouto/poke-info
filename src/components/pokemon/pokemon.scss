@@ -1,0 +1,28 @@
+.containerPokemon{
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+    background-color: rgb(30, 148, 227);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+      margin: 20px;
+      width: 128px;
+    }
+    p{
+      background-color: rgba(0, 0, 0, 0.3);
+      display: block;
+      width: 100%;
+      margin: 5px 0px;
+      padding: 10px;
+      border-bottom: 1px solid black;
+      border-radius: 2px;
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+  
