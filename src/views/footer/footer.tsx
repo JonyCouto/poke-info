@@ -19,13 +19,13 @@ export default function Footer(){
                 </Grid2>
                 <Grid2 size={{ xs: 12, lg: 3 }}>
                     <Link href="https://github.com/JonyCouto" target="_blank" rel="noopener">
-                    GitHub
+                    	GitHub
                     <SvgIcon component={ArrowRightAltIcon} />
                     </Link>
                 </Grid2>
                 <Grid2 size={{ xs: 12, lg: 3 }}>
                     <Link href="https://www.linkedin.com/in/jonathan-vinicius-couto-a4900119b/" target="_blank" rel="noopener">
-                    LinkedIn
+                    	LinkedIn
                     <SvgIcon component={ArrowRightAltIcon} />
                     </Link>
                 </Grid2>

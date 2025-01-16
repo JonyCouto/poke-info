@@ -56,10 +56,10 @@ export default function Header(){
                     <Image src={logo} alt="Logo Poké Info" />
                 </Link>
             </Grid2>
-            <Grid2 size={{ xs: 8, lg: 5 }}>
+            <Grid2 size={{ xs: 0, lg: 5 }} display={matches ? "none" : "block"}>
                 <h1>Poké Info</h1>
             </Grid2>
-            <Grid2 size={{ xs: 12, lg: 5 }} className={matches ? "containerLinksSmall" : "containerLinksBigger"}>
+            <Grid2 size={{ xs: 10, lg: 5 }} className={matches ? "containerLinksSmall" : "containerLinksBigger"}>
                 <div style={{display: matches ? "block": "none"}}>
                     <Button
                         className='navs'

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/views/header/header";
 import "./globals.scss";
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Poké Info",
-  description: "Desenvolvido por Jonathan Couto",
+  description: "Desenvolvido por Jonathan Couto"
 };
 
 export default function RootLayout({

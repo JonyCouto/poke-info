@@ -1,10 +1,6 @@
 'use client';
 
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
@@ -12,8 +8,8 @@ import { Grid2, Icon } from '@mui/material';
 import axios from 'axios';
 import IPokemon from '@/interfaces/pokemon';
 import Pokemon from '@/components/pokemon/pokemon';
-import { SearchRounded } from '@mui/icons-material';
 import { KeyboardEvent, useEffect, useState } from 'react';
+import { SearchRounded } from '@mui/icons-material';
 
 export default function Home() {
 	const [pokemon, setPokemon] = useState<IPokemon>(null);
@@ -45,36 +41,41 @@ export default function Home() {
 	}
 	return (
 		<Grid2 container sx={{ justifyContent: "center", alignItems: "center", height: "100%" }}>
-			<Grid2 size={{ xs: 12, lg: 4 }} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-				<Card sx={{ maxWidth: 345 }}>
-					<CardContent>
-						<Typography gutterBottom variant="h5" component="div">
-							Bem vindos(as)!
-						</Typography>
-						<Typography variant="body2" sx={{ color: 'text.secondary', textAlign: 'justify' }}>
-							Olá aventureiro(a) DEV, esse é um projeto para testes com a tecnologia React utilizando Next.js, componentizações
-							com Matherial UI e requisições http a uma API livre de pokémons.
-						</Typography>
-					</CardContent>
-					<CardActions sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-						<FormControl variant="standard">
-							<InputLabel htmlFor="pokemon-search">Nome do pokémon ou ID</InputLabel>
-							<Input
-								id="pokemon-search"
-								value={searchTerm}
-								onChange={(e) => {
-									setSearchTerm(e.target.value)
-								}}
-								onKeyDown={(e) => { handleEventKey(e) }}
-							/>
-						</FormControl>
-						<Button size="small" onClick={() => searchPokemon(searchTerm)}>
-							<SearchRounded />
-						</Button>
-					</CardActions>
-				</Card>
+			<Grid2 size={{ xs: 12, lg: 4 }} sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", textAlign: "justify" }} className="info">
+				<h2>Sobre o projeto</h2>
+				<p>
+					Este projeto foi desenvolvido com o objetivo de praticar e aprofundar conhecimentos em tecnologias modernas de desenvolvimento front-end.
+				</p>
+				<h3>Tecnologias utilizadas</h3>
+				<ul>
+					<li><strong>React</strong>: Para criar interfaces dinâmicas e responsivas;</li>
+					<li><strong>Next.js</strong>: Para otimizar o carregamento das páginas e implementar rotas de forma eficiente;</li>
+					<li><strong>Axios</strong>: Para realizar requisições HTTP de forma simples e eficaz;</li>
+					<li><strong>SASS e CSS</strong>: Para estilização avançada e personalização de componentes;</li>
+					<li><strong>JavaScript (JS) e TypeScript (TS)</strong>: Unindo flexibilidade e segurança no desenvolvimento;</li>
+					<li><strong>Material UI</strong>: Para a criação de uma interface elegante e consistente com componentes reutilizáveis.</li>
+				</ul>
+				<p>
+					O projeto combina essas tecnologias para entregar uma aplicação moderna, funcional e com foco em boas práticas de desenvolvimento. 😊
+				</p>
 			</Grid2>
 			<Grid2 size={{ xs: 12, lg: 4 }} sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+				<div className="containerSearch">
+					<FormControl variant="filled">
+						<InputLabel htmlFor="pokemon-search">Nome do pokémon ou ID</InputLabel>
+						<Input
+							id="pokemon-search"
+							value={searchTerm}
+							onChange={(e) => {
+								setSearchTerm(e.target.value)
+							}}
+							onKeyDown={(e) => { handleEventKey(e) }}
+						/>
+					</FormControl>
+					<Button size="small" onClick={() => searchPokemon(searchTerm)}>
+						<SearchRounded />
+					</Button>
+				</div>
 				<Pokemon {...{ pokemon, fade }} />
 			</Grid2>
 		</Grid2>

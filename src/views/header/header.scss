@@ -1,12 +1,12 @@
 .header {
-    background: rgb(30, 148, 227);
+    background: #333434;
     color: white;
     padding: 20px; /* Added padding */
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.1); /* Added shadow */
     position: fixed;
     width: 100vw;
     grid-area: header;
-    height: 22vh;
+    height: 15vh;
 	z-index: 1000;
 }
 

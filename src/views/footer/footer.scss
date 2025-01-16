@@ -1,8 +1,8 @@
 .footer{
-    background-color: azure;
+    background-color: rgb(233, 231, 231);
     color: grey;
     padding: 20px; /* Added padding */;
-    box-shadow: 0 -4px 8px 5px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    box-shadow: 0 -4px 8px 5px rgba(0, 0, 0, 0.1); /* Added shadow */
     grid-area: footer;
     a{
         text-decoration: underline;

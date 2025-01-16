@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --background: #ffffff;
@@ -18,12 +19,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #F3F4F6;
 }
 
 .body{
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 22vh minmax(68vh, auto) minmax(10vh, auto);
+  grid-template-rows: 15vh minmax(75vh, auto) minmax(10vh, auto);
   grid-template-areas: "header" 
   "main" 
   "footer";
@@ -31,7 +33,33 @@ body {
 
 .main{
   grid-area: main;
-  padding: 10px;
+  padding: 30px;
   height: 100%;
-  background: rgb(70, 70, 70);
+}
+
+.body {
+	font-family: "Montserrat", serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.info{
+	color: rgb(2, 2, 99);
+	h2, h3{
+		width: 100%;
+		text-align: start;
+		font-weight: bold;
+		margin: 15px 0px;
+	}
+	ul{
+		list-style: disc;
+	}
+}
+
+.containerSearch{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 0px;
 }
